@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A complete practice project demonstrating HTML skills">
+    <title>My Portfolio - Practice Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            color: #764ba2;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin: 1rem auto;
+            display: block;
+            object-fit: cover;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .project-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #667eea;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        button {
+            background-color: #667eea;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #764ba2;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .social-links {
+            margin: 1rem 0;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav li {
+                margin: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="https://via.placeholder.com/200x200" alt="Profile Picture" class="profile-img">
+        <h1>John Doe</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- ABOUT SECTION -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with 5 years of experience creating beautiful and functional websites. I love turning complex problems into simple, elegant solutions.</p>
+            <p>When I'm not coding, you can find me reading tech blogs, attending web development meetups, or exploring new programming languages and frameworks.</p>
+            <h3>My Interests</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>User Experience Design</li>
+                <li>Open Source Contributions</li>
+                <li>Photography</li>
+                <li>Travel</li>
+            </ul>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Vue.js</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git</li>
+                        <li>VS Code</li>
+                        <li>Figma</li>
+                        <li>Adobe XD</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="E-commerce Website">
+                    <h3>E-commerce Website</h3>
+                    <p>A full-featured online store with shopping cart, payment integration, and admin dashboard.</p>
+                    <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                    <a href="https://example.com" target="_blank">View Project →</a>
+                </article>
+                <article class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Task Management App">
+                    <h3>Task Management App</h3>
+                    <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                    <p><strong>Technologies:</strong> Vue.js, Firebase, CSS3</p>
+                    <a href="https://example.com" target="_blank">View Project →</a>
+                </article>
+                <article class="project-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Weather Dashboard">
+                    <h3>Weather Dashboard</h3>
+                    <p>A responsive weather application that displays current conditions and forecasts for any location.</p>
+                    <p><strong>Technologies:</strong> JavaScript, API Integration, HTML5</p>
+                    <a href="https://example.com" target="_blank">View Project →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senior Web Developer</td>
+                        <td>Tech Solutions Inc.</td>
+                        <td>2021 - Present</td>
+                        <td>Lead development of web applications, mentor junior developers, and collaborate with cross-functional teams.</td>
+                    </tr>
+                    <tr>
+                        <td>Web Developer</td>
+                        <td>Digital Agency</td>
+                        <td>2019 - 2021</td>
+                        <td>Developed responsive websites for clients, implemented new features, and maintained existing codebases.</td>
+                    </tr>
+                    <tr>
+                        <td>Junior Developer</td>
+                        <td>Startup Company</td>
+                        <td>2018 - 2019</td>
+                        <td>Assisted in building web applications, fixed bugs, and learned best practices from senior developers.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education">
+            <h2>Education</h2>
+            <dl>
+                <dt><strong>Bachelor of Science in Computer Science</strong></dt>
+                <dd>University of Technology, 2014 - 2018</dd>
+                <dd>Specialized in Web Development and Software Engineering</dd>
+                
+                <dt><strong>Web Development Bootcamp</strong></dt>
+                <dd>Online Coding School, 2018</dd>
+                <dd>Intensive 6-month program covering full-stack development</dd>
+            </dl>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+            
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="mailto:john.doe@example.com">Email</a>
+        </div>
+        <p>Last updated: <time datetime="2024-01-20">January 20, 2024</time></p>
+    </footer>
+
+    <hr style="margin: 3rem 0;">
+
+    <!-- PROJECT NOTES -->
+    <main style="padding: 2rem;">
+        <section style="background-color: #fff3cd; border-left: 4px solid #ffc107;">
+            <h2>🎓 Project Learning Notes</h2>
+            <p>This practice project demonstrates the following HTML concepts:</p>
+            <ul>
+                <li>✅ Semantic HTML5 elements (header, nav, main, section, article, footer)</li>
+                <li>✅ Proper document structure and hierarchy</li>
+                <li>✅ Headings (h1-h3) used correctly</li>
+                <li>✅ Lists (ul, ol, dl) for organizing content</li>
+                <li>✅ Tables for structured data</li>
+                <li>✅ Forms with various input types</li>
+                <li>✅ Links (internal anchors and external)</li>
+                <li>✅ Images with alt text</li>
+                <li>✅ Meta tags for SEO</li>
+                <li>✅ Accessibility considerations</li>
+            </ul>
+            <h3>Your Turn!</h3>
+            <p>Try creating your own portfolio or personal website using all the concepts you've learned. Customize this template with your own information, add more sections, and experiment with different layouts!</p>
+        </section>
+    </main>
+
+</body>
+</html>
+

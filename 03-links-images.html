@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links & Images - Lesson 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        LINKS & IMAGES - LESSON 3
+        
+        This lesson covers how to add links (hyperlinks) and images
+        to your HTML pages.
+    -->
+
+    <h1>Working with Links and Images</h1>
+
+    <!-- LINKS (Anchor tags) -->
+    <h2>Links</h2>
+    
+    <!-- External link -->
+    <p>Visit <a href="https://www.example.com">Example.com</a> to see an example website.</p>
+    
+    <!-- Link that opens in new tab -->
+    <p>Visit <a href="https://www.google.com" target="_blank">Google</a> (opens in new tab).</p>
+    
+    <!-- Link with title attribute (tooltip) -->
+    <p>Hover over <a href="https://www.wikipedia.org" title="Free online encyclopedia">Wikipedia</a> to see a tooltip.</p>
+    
+    <!-- Internal link (to another page in same folder) -->
+    <p>Go to <a href="01-basics.html">Lesson 1: Basics</a> to review HTML fundamentals.</p>
+    
+    <!-- Link to a specific section on the same page (anchor) -->
+    <p>Jump to the <a href="#images-section">Images section</a> below.</p>
+    
+    <!-- Email link -->
+    <p>Contact us at <a href="mailto:example@email.com">example@email.com</a></p>
+    
+    <!-- Phone link -->
+    <p>Call us at <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    
+    <!-- Link styled as a button -->
+    <p><a href="https://www.example.com" style="background-color: #0066cc; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block;">Click Me!</a></p>
+
+    <hr>
+
+    <!-- IMAGES -->
+    <h2 id="images-section">Images</h2>
+    
+    <!-- Basic image -->
+    <p>Here's a basic image:</p>
+    <!-- Note: This uses a placeholder image service. Replace with your own images! -->
+    <img src="https://via.placeholder.com/400x200" alt="Placeholder image 400x200">
+    
+    <!-- Image with all attributes -->
+    <p>Image with all important attributes:</p>
+    <img 
+        src="https://via.placeholder.com/300x300" 
+        alt="A square placeholder image"
+        width="300"
+        height="300"
+        title="Hover tooltip for image"
+    >
+    
+    <!-- Image as a link -->
+    <p>Click the image below to visit a website:</p>
+    <a href="https://www.example.com">
+        <img src="https://via.placeholder.com/200x100" alt="Clickable image">
+    </a>
+    
+    <!-- Image with caption (using figure and figcaption) -->
+    <figure>
+        <img src="https://via.placeholder.com/400x300" alt="Example image">
+        <figcaption>This is a caption for the image above</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- Image attributes explained -->
+    <h2>Image Attributes Explained</h2>
+    
+    <h3>src (source)</h3>
+    <p>The <code>src</code> attribute specifies the path to the image file. It can be:</p>
+    <ul>
+        <li><strong>Relative path:</strong> <code>images/photo.jpg</code> (file in same folder structure)</li>
+        <li><strong>Absolute URL:</strong> <code>https://example.com/image.jpg</code> (full web address)</li>
+    </ul>
+    
+    <h3>alt (alternative text)</h3>
+    <p>The <code>alt</code> attribute is <strong>required</strong> for accessibility. It describes the image for:</p>
+    <ul>
+        <li>Screen readers (for visually impaired users)</li>
+        <li>When the image fails to load</li>
+        <li>Search engines</li>
+    </ul>
+    
+    <h3>width and height</h3>
+    <p>These attributes set the display size. It's good practice to include them to prevent layout shifts.</p>
+
+    <hr>
+
+    <!-- Combining links and images -->
+    <h2>Combining Links and Images</h2>
+    
+    <p>You can create image galleries or clickable image links:</p>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+1" alt="Image 1" width="150" height="150">
+        </a>
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+2" alt="Image 2" width="150" height="150">
+        </a>
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+3" alt="Image 3" width="150" height="150">
+        </a>
+    </div>
+
+    <hr>
+
+    <!-- PRACTICE EXERCISE -->
+    <h2>Practice Exercise</h2>
+    <p>Create a page with:</p>
+    <ol>
+        <li>At least 3 links to different websites</li>
+        <li>One link that opens in a new tab</li>
+        <li>An email link</li>
+        <li>At least 2 images (you can use placeholder images or find free images online)</li>
+        <li>One image that is also a clickable link</li>
+        <li>Make sure all images have proper alt text</li>
+    </ol>
+
+    <p><strong>Tip:</strong> To use your own images, create an "images" folder in the same directory as your HTML file, and reference them like: <code>&lt;img src="images/your-photo.jpg" alt="Description"&gt;</code></p>
+
+</body>
+</html>
+

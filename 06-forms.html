@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Lesson 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"],
+        input[type="reset"],
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px 0 0;
+        }
+        input[type="submit"]:hover,
+        button:hover {
+            background-color: #45a049;
+        }
+        fieldset {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        FORMS - LESSON 6
+        
+        This lesson covers HTML forms and form elements used to
+        collect user input.
+    -->
+
+    <h1>Working with Forms</h1>
+
+    <!-- BASIC FORM STRUCTURE -->
+    <h2>Basic Form Structure</h2>
+    <p>Forms are used to collect user input. Here's a simple example:</p>
+    
+    <form action="/submit" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- TEXT INPUTS -->
+    <h2>Text Inputs</h2>
+    
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+        
+        <label for="email2">Email:</label>
+        <input type="email" id="email2" name="email2" placeholder="your.email@example.com">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+        
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color">
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- TEXTAREA -->
+    <h2>Textarea (Multi-line Text)</h2>
+    
+    <form>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message here..."></textarea>
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="6" placeholder="Your comments..."></textarea>
+        
+        <input type="submit" value="Send Message">
+    </form>
+
+    <hr>
+
+    <!-- CHECKBOXES AND RADIO BUTTONS -->
+    <h2>Checkboxes and Radio Buttons</h2>
+    
+    <form>
+        <fieldset>
+            <legend>Choose Your Interests (Checkboxes)</legend>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label><br>
+            
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label><br>
+            
+            <input type="checkbox" id="reading" name="interests" value="reading">
+            <label for="reading">Reading</label><br>
+            
+            <input type="checkbox" id="travel" name="interests" value="travel">
+            <label for="travel">Travel</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Choose Your Favorite Color (Radio Buttons)</legend>
+            <input type="radio" id="red" name="color" value="red">
+            <label for="red">Red</label><br>
+            
+            <input type="radio" id="blue" name="color" value="blue">
+            <label for="blue">Blue</label><br>
+            
+            <input type="radio" id="green" name="color" value="green">
+            <label for="green">Green</label><br>
+            
+            <input type="radio" id="yellow" name="color" value="yellow">
+            <label for="yellow">Yellow</label>
+        </fieldset>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- SELECT DROPDOWN -->
+    <h2>Select Dropdown</h2>
+    
+    <form>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="">Select a country</option>
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+            <option value="germany">Germany</option>
+        </select>
+        
+        <label for="state">State (Multiple Selection):</label>
+        <select id="state" name="state" multiple size="4">
+            <option value="ny">New York</option>
+            <option value="ca">California</option>
+            <option value="tx">Texas</option>
+            <option value="fl">Florida</option>
+            <option value="il">Illinois</option>
+        </select>
+        <small>Hold Ctrl (or Cmd on Mac) to select multiple</small>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- FILE UPLOAD -->
+    <h2>File Upload</h2>
+    
+    <form>
+        <label for="file">Upload a file:</label>
+        <input type="file" id="file" name="file" accept="image/*,.pdf,.doc,.docx">
+        
+        <label for="files">Upload multiple files:</label>
+        <input type="file" id="files" name="files" multiple>
+        
+        <input type="submit" value="Upload">
+    </form>
+
+    <hr>
+
+    <!-- COMPLETE CONTACT FORM EXAMPLE -->
+    <h2>Complete Contact Form Example</h2>
+    
+    <form action="/contact" method="post">
+        <fieldset>
+            <legend>Contact Information</legend>
+            
+            <label for="contact-name">Full Name: *</label>
+            <input type="text" id="contact-name" name="name" required>
+            
+            <label for="contact-email">Email: *</label>
+            <input type="email" id="contact-email" name="email" required>
+            
+            <label for="contact-phone">Phone:</label>
+            <input type="tel" id="contact-phone" name="phone">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Your Message</legend>
+            
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="general">General Inquiry</option>
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="feedback">Feedback</option>
+            </select>
+            
+            <label for="contact-message">Message: *</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferences</legend>
+            
+            <label>
+                <input type="checkbox" name="newsletter" value="yes">
+                Subscribe to newsletter
+            </label><br>
+            
+            <label>
+                <input type="checkbox" name="terms" value="accepted" required>
+                I agree to the terms and conditions *
+            </label>
+        </fieldset>
+        
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Reset Form">
+    </form>
+
+    <hr>
+
+    <!-- FORM ATTRIBUTES -->
+    <h2>Important Form Attributes</h2>
+    
+    <h3>Form Attributes</h3>
+    <ul>
+        <li><strong>action:</strong> Where to send form data (URL)</li>
+        <li><strong>method:</strong> How to send data (GET or POST)</li>
+        <li><strong>enctype:</strong> Encoding type (important for file uploads)</li>
+    </ul>
+    
+    <h3>Input Attributes</h3>
+    <ul>
+        <li><strong>type:</strong> The input type (text, email, password, etc.)</li>
+        <li><strong>name:</strong> Name of the field (used when submitting)</li>
+        <li><strong>id:</strong> Unique identifier (used with label's "for" attribute)</li>
+        <li><strong>value:</strong> Default value</li>
+        <li><strong>placeholder:</strong> Hint text shown in empty fields</li>
+        <li><strong>required:</strong> Field must be filled before submitting</li>
+        <li><strong>disabled:</strong> Field cannot be edited</li>
+        <li><strong>readonly:</strong> Field can be seen but not edited</li>
+        <li><strong>min/max:</strong> Minimum/maximum values (for numbers/dates)</li>
+        <li><strong>pattern:</strong> Regular expression for validation</li>
+    </ul>
+
+    <hr>
+
+    <!-- PRACTICE EXERCISE -->
+    <h2>Practice Exercise</h2>
+    <p>Create a registration form with:</p>
+    <ol>
+        <li>Text inputs for name, email, and phone</li>
+        <li>A password field</li>
+        <li>Radio buttons for gender or age group</li>
+        <li>Checkboxes for interests or preferences</li>
+        <li>A dropdown for country or state</li>
+        <li>A textarea for additional comments</li>
+        <li>Required fields marked with *</li>
+        <li>Submit and reset buttons</li>
+        <li>Proper labels for all fields</li>
+    </ol>
+
+</body>
+</html>
+
