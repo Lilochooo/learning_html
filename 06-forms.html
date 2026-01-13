@@ -317,6 +317,59 @@
         <li>Submit and reset buttons</li>
         <li>Proper labels for all fields</li>
     </ol>
+    <hr>
+    <h2>Practice excersie for forms</h2>
+    <form action="/submit" method="post">
+        <label for="firstandlastname">First and Last Name</label>
+        <input type="text" id="firstandlastname" placeholder="John Doe" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="johndoe123@example.com" required>
+        <label for="phone">Phone #:</label>
+        <input type="tel" id="phone" placeholder="123-456-7890">  
+        <hr>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <input type="submit" value="Submit">
+        <hr>
+        <fieldset>
+            <legend>Please provide your gender</legend>
+            <input type="radio" id="Male" name="gender" value="Male">
+            <label for="Male">Male</label><br>
+            <input type="radio" id="Female" name="gender" value="Male">
+            <label for="Female">Female</label><br>
+            <input type="radio" id="rathernotsay" name="gender" value="Rathernotsay">
+            <label for="Rathernotsay">Rather not say</label><br>
+        </fieldset>   
+        <fieldset>
+            <legend>What are your interests?</legend>
+            <input type="checkbox" id="workingout" name="interests" value="workingout">
+            <label for="workingout">Working Out</label><br>
+            <input type="checkbox" id="watchingmovies" name="interests" value="watchingmovies">
+            <label for="watchingmovies">Watching Movies</label><br>
+            <input type="checkbox" id="cooking" name="interests" value="cooking">
+            <label for="cooking">Cooking</label><br>
+            <input type="checkbox" id="reading" id="interests" value="reading">
+            <label for="reading">Reading</label><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+
+    <hr>
+        <label for="country">Country</label>
+          <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="usa">United States</option>
+        <option value="mex">Mexico</option>
+        <option value="can">Canada</option>
+        <option value="ind">India</option>
+    </form>
+    <hr>
+    <form>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter message here"></textarea>
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="6" placeholder="Your Comments"></textarea>
+    <input type="submit" value="Send Message">
+    </form>
 
 </body>
 </html>
