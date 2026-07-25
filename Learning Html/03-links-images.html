@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links & Images - Lesson 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        LINKS & IMAGES - LESSON 3
+        
+        This lesson covers how to add links (hyperlinks) and images
+        to your HTML pages.
+    -->
+
+    <h1>Working with Links and Images</h1>
+
+    <!-- LINKS (Anchor tags) -->
+    <h2>Links</h2>
+    
+    <!-- External link -->
+    <p>Visit <a href="https://www.example.com">Example.com</a> to see an example website.</p>
+    
+    <!-- Link that opens in new tab -->
+    <p>Visit <a href="https://www.google.com" target="_blank">Google</a> (opens in new tab).</p>
+    
+    <!-- Link with title attribute (tooltip) -->
+    <p>Hover over <a href="https://www.wikipedia.org" title="Free online encyclopedia">Wikipedia</a> to see a tooltip.</p>
+    
+    <!-- Internal link (to another page in same folder) -->
+    <p>Go to <a href="01-basics.html">Lesson 1: Basics</a> to review HTML fundamentals.</p>
+    
+    <!-- Link to a specific section on the same page (anchor) -->
+    <p>Jump to the <a href="#images-section">Images section</a> below.</p>
+    
+    <!-- Email link -->
+    <p>Contact us at <a href="mailto:example@email.com">example@email.com</a></p>
+    
+    <!-- Phone link -->
+    <p>Call us at <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    
+    <!-- Link styled as a button -->
+    <p><a href="https://www.example.com" style="background-color: #0066cc; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block;">Click Me!</a></p>
+
+    <hr>
+
+    <!-- IMAGES -->
+    <h2 id="images-section">Images</h2>
+    
+    <!-- Basic image -->
+    <p>Here's a basic image:</p>
+    <!-- Note: This uses a placeholder image service. Replace with your own images! -->
+    <img src="https://via.placeholder.com/400x200" alt="Placeholder image 400x200">
+    
+    <!-- Image with all attributes -->
+    <p>Image with all important attributes:</p>
+    <img 
+        src="https://via.placeholder.com/300x300" 
+        alt="A square placeholder image"
+        width="300"
+        height="300"
+        title="Hover tooltip for image"
+    >
+    
+    <!-- Image as a link -->
+    <p>Click the image below to visit a website:</p>
+    <a href="https://www.example.com">
+        <img src="https://via.placeholder.com/200x100" alt="Clickable image">
+    </a>
+    
+    <!-- Image with caption (using figure and figcaption) -->
+    <figure>
+        <img src="https://via.placeholder.com/400x300" alt="Example image">
+        <figcaption>This is a caption for the image above</figcaption>
+    </figure>
+
+    <hr>
+
+    <!-- Image attributes explained -->
+    <h2>Image Attributes Explained</h2>
+    
+    <h3>src (source)</h3>
+    <p>The <code>src</code> attribute specifies the path to the image file. It can be:</p>
+    <ul>
+        <li><strong>Relative path:</strong> <code>images/photo.jpg</code> (file in same folder structure)</li>
+        <li><strong>Absolute URL:</strong> <code>https://example.com/image.jpg</code> (full web address)</li>
+    </ul>
+    
+    <h3>alt (alternative text)</h3>
+    <p>The <code>alt</code> attribute is <strong>required</strong> for accessibility. It describes the image for:</p>
+    <ul>
+        <li>Screen readers (for visually impaired users)</li>
+        <li>When the image fails to load</li>
+        <li>Search engines</li>
+    </ul>
+    
+    <h3>width and height</h3>
+    <p>These attributes set the display size. It's good practice to include them to prevent layout shifts.</p>
+
+    <hr>
+
+    <!-- Combining links and images -->
+    <h2>Combining Links and Images</h2>
+    
+    <p>You can create image galleries or clickable image links:</p>
+    
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+1" alt="Image 1" width="150" height="150">
+        </a>
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+2" alt="Image 2" width="150" height="150">
+        </a>
+        <a href="https://www.example.com">
+            <img src="https://via.placeholder.com/150x150?text=Image+3" alt="Image 3" width="150" height="150">
+        </a>
+    </div>
+
+    <hr>
+
+    <!-- PRACTICE EXERCISE -->
+    <h2>Practice Exercise</h2>
+    <p>Create a page with:</p>
+    <ol>
+        <li>At least 3 links to different websites</li>
+        <li>One link that opens in a new tab</li>
+        <li>An email link</li>
+        <li>At least 2 images (you can use placeholder images or find free images online)</li>
+        <li>One image that is also a clickable link</li>
+        <li>Make sure all images have proper alt text</li>
+    </ol>
+
+    <p><strong>Tip:</strong> To use your own images, create an "images" folder in the same directory as your HTML file, and reference them like: <code>&lt;img src="images/your-photo.jpg" alt="Description"&gt;</code></p>
+
+</body>
+</html>
+<hr>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My favorite hobby</title>
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                line-height: 1.6;
+            }    
+    </style>
+</head>
+<body>
+<h1>my try at links and images</h1>
+<a href="https://x.com/home">X</a>
+<a href="https://www.youtube.com/">Youtube</a>
+<a href="https://www.instagram.com/">Instagram</a>
+<a href="https://www.google.com/" target="_blank">Google</a>
+<p>Contact me at <a href="rickynajera165@gmail.com">rickynajera165@gmail.com</a></p>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxASEhASEhAQEBAQDxAPDxAPDw8PDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0fHyUtLS0tLS0tLS0tLS0tKy0uKystLS0tLS0tLS0tLS0tLS0tNS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAFAAIDBAYBBwj/xAA3EAACAQMCBQIEBAUDBQAAAAAAAQIDBBEFIQYSMUFRYXETIoGRMkKxwRRSYqHRFeHwIzNygvH/xAAZAQACAwEAAAAAAAAAAAAAAAADBAABAgX/xAAlEQACAgICAgMAAgMAAAAAAAAAAQIRAyESMQRBEyJRYYEUUnH/2gAMAwEAAhEDEQA/AN/C3SR34TZYp74LlKikhA6TdFGFr5I61FeAhUiU6iJZVWDLiyT6AytQaNFKJQuKYeGRgZ40BjqJK9PDIhhMVao6IQiyjpPZzxJFcfB4ZGQ32nSzFFzBndDvlhJmhjNMCEI6pGSVGiCVRLuDl2bQqjwjDcSXic8epoNa1WMIvc80vNQc6uc9zKXJm7o3WkdEHaETP6B+FewdjUB9GpK2WsIbKJUnUIJ1mt0ycyLGW6lMp3FAko36ezJp4ZLTJTj2Z28o4A11A1N9TM7dw3KTphltAmcBQRPUgMUQtmKLNAu03go0mT/EMM2grbX7j3C1vfKRkZVCW3uGn1Nxk0YlFM20JJkikZ611DyXY6gvJtSTBODQVyIGf6ijhZWyxptVMJuRmtEqbh/mFYsayR2dm8kM4EuTjNGCnNFK5CVSIMuXuaitkb0ULyOxQCF09gbkbh0J5exx0bk6bBnRw06iyFm3rOL2C8Nd5I7sBoA6/e4XKmZcUy06NRX4vhvuC7zi9dmYGdRvuMbB/AjfysO6hrU6vfYp6dQlVqwjHq3nL6Jd2ylBmm4QpL55921Fe3V/sSVQi6NQTnJJm3sKcacUs5wt2Tu5z0KM+gKv6k45abXdCDZ0IQTDla4a7lOrdyMvPWZqUW/ITjfJpepGmgiigkrpBO0u8rqZiVTJcsa2+DNkljtB25llAG8QYmtsgW7luy0wSjRTnEj5SRjoxNqRHEYkckyX4b7LIQ0/RnPeWy8F8inEEwi5PZN+xahZ1FvyM11rYU4LZIsSivCJyYO0YtZQyrVfkParaR6pY8mdvHjJcXZp9WQu8l5EDJ1t2IPxAcja2O0soOUapkY3Lg9wpbanF9xBWnY/JJmhyJsH0b6L7k7uF2Dx2LyVHa08A6uu5PUnkrXFRYDxiBlKgXe1OxUQ6s92MQzFUhWTt2OOnDqLMjkPiMRBdXainuQgtQu1BPcxeoXLnJlnVNQcnhMFNlkEcyJsa2QhJGZqeD555l4efuZOlTcma7hqnyc3rgBna4jHjJuRs1HKQO1Oi+V7eq9y3Tu4rusnaqc09+q87HPbOhBNM8yvq+anKvyt/QMWNRcuGDK2lShOalPEuZ5yvUs2z5E05JhptNKjeKLTbYVhVwE9Py9wLYUZTeXskaGxhh+iF5BmX1Vl4K17QzuEKcs9FsOqRTRkE2A4WrbC1lpK6yJremi0qxqzDTOq1px7IdCp42RUr3BXrXOEyuRaxthiFUlTM1a6nloM2tdtbm1MHkxOI3UYZi/Yx0IfElKLfQ1t9dpJ5MJd3vw67cXjfJuG3oqqjssVOHKmXiW3YQdttcg4xbSzjcQT5ZAfhX4UtQj3BVSbXQMXv4WA6r2ZnDtDGbQqGsTiwrbcR+TK1HuRSkOLHE57yyN9DVlIkVXPcwlC8lHuErfV/IRRSAtth65juQg6vq0cdSFauvKLKDCFKol1A09XX8yB11rHjchA5eailnczd/qTllJ7FGvdSl1ZHFZLId6k9O2bLdpZ92EI00gUp/gSOO+wT/As7DTWHKFDIToWi8A3laCrEgBZ2GOxd1KUqVNSjtmXK/t/sHFaoq16MakZU5fhe3t6r1ASnfYxijT0Z6z1SWd2abSdXTai312We5h9QtJ0ZtZzH8svPv6m70aFOVOMcLCil6p+fcHliu0OY5WmpIpcXWueSceueVv0ays/87gizssvd/4RpdThmHwpvdtJP67Mp2+mf1bIGp6oJQ+lBJJLZF+2qLot/YrQtlnd7ILWbpx6YRgktIZFy77LwSVLjC6ddlksfxEe0X74Bt7X531wo7L37lGNv0SO9cU5PGEsvcksdQjWpxqR6SXR9U+6MzxRduFKNOO86rxhdcBjR7V0qMKb6pZfu92aaqNkjtl6o87lHUJS5cx3SW67oIwjsB7qs4TfgwFhtlLQKrnNxfVS6G5oQwjHaVGLuYyjtmL5l58G0m9sBPdgfIb0jP65Vx7HnerXWZ5z6G54jmuWS26M8zvaqctuwx4yt2LeQ6gkFaV88LcQJpz2QhnghXmz0PULnCwA7m42JL25y3uCqtXLMYcdIJnyicjg3IsjQkOQ9MjyOTLKIrt7FDmL129geQg7IsnDpCHS9p1HLKKDGjxMTdI1BWwlGOEPpwydwWremKtjaRPbUQjTjggoxJ4yMFsfgD0aj55p7NSaDKYI1W3lCoqqXyPCn6PszEloJilToHatatpvkcjuh3bhyrdLvntjrkN04xnH6AmpZpS3WYvZrdAr1TH47EtTdes5/hoUe72Wy2X7kMNZqyb5YLkzt1zy9sgni1VKEOSLapzacGuyzvEz9DW60ek39VF/sMQwc48kK5fJUJcWel297F45qcvZMJ2+oUf5WvdHl9Liu4XXkl7xRdtuNpL8dKMl/S8P+5h+LkXor/Lxv2em1dWhhqCbk11xhIGcqys7blO0rKdOnUw0qsVUS6ySa2XuiLVtVoUYx+LLlctsRXM3Hvt26dfUBxbdBrjFWQ0bapWvfiVISVKmswb/AAy/lw/7mqnDPQy1HiuybWKs45XeDS/sXIcRW0ulzHfzlfsalGftFRnH0w9HKRSr2im90V6Wp030rwl4xNA/WuIZUJ28YSjLnqwVTpJOm5JNLw8MzGDbpGnk4qw3p+nwpVOddcYQXr1cLIH1C8iqkcbJr++S3XqKdNpPGUlt137lWalFumzH8VXseSbT+boYFzDnF0ZU6rpN56ST7uL6Z/52M62dLx4VCzm+VkudL0XaMtl9f1EMpQeEIIwKDc6jYzJwQRAmOyLI06WUOHRGIcQhXvJFMluZ7kGSFDhwxM6Qg4MaNPsBkXNPq8skYmrRqDpmrhAuUYlWzmpJF2KE2OE0WPiyKKJYoyQsUizUoKcJRfSUWvuirTZLGvghnYK0t7YfVNpr1Twy7OitmU38teaS+Wa+In2TfVfff6hSnFNJ9RaSpnSjK1Zn+J7JVaNSDWZR+aHlSX+en1PN7izlH8UJR90evXlFb42b89GVbSxpVYOMoptbBsOd41QLN48cmzySlTzskGbPSVUlTp/Dac2ouXNJY8vx0yGb3h5ULhY/7c38q/ll1waCxoRWWljljyr3fV/p92Hy+T/qBw+KknyLdHlSUcYhCOO6+WKwn9jzvi64+NcPl/LiHomupuNZu1SoTl+aS5I+5nuEuH3cc9Wb2y8bdX3YLA1C5s3njzqCA1vw1Wly8tSk+dZW8kl6dCapwldrZKnL/wAai/fBor6zdrOCz8jls/Dx0JauqJSW/Y0/IyejS8PFRjamiXcetGf/AKuMv0Za4e06pK4pOpCcYU26knOMksx3it/XH2YZvtTa79SxokpVe+y6s1LNPg7SKj4uNTW3os61c9MPdPKGabr2Mc3Zp49iTVbOKaSbe2/uZ+5tuXynkBCMZKhqeRx36LXHc4VZUasPzQkn5TTW392ZSnRbYbrJyST7Nv74/wADIUUhvHLjGjl5YqU210dpUVhCO84itl6HHTghoTOiEIsockNrTwjrkU69TJCEU3kacOohQkOOxpN9hzoy8FWXQ1E9JEKRNBkZEGtOvOUPUbuLXUxirYHq/a7gJY7CxyUbeNZeSWNdeTGWuoSfcMW9STAvG0GU0wvWu8FKpfMrVVIghB5M0bRbqXEnyyz+F5a8x7mh06fMljuAaFBvsEtDThzQfWL2z/L2AZF7HMMrTQWnTTKFpRaquPSLXMn79gnOm/Qo1sxnBtY7Z7bgwiKPEVs5KOPxc8XH3T/+jIQSSj1/z3ZY1Gqudf0rHpl/7fqUb27jTpym30Tx7l7eidIy3G+opzUE/lprdf1Gy4K5YW1P1imYG0sJXEa9V7v8vv1b/QL8PahKFKMW/wAK5fs8DOSNY1FdrsBgTnNt9Na/o0vElSMuTKTxUi/2AeuxjyPbdbxfcV3e/ElCK3fMnL0QtaU1HEcKeG456ZAxTTVjrSUGgTb6Jc3EXKnBcq25pyUU34WepodAsp0aShNctTLclts89AraXHLThH8yit/XG4MvL3E9+5cskpriDjgUHyLNzRy/UD3tNc+/ZBaFdSe3gAa3cYkisafKjOZpRtlas0inUmclWTGMciqOdKVnMiGiNGC0dOKS8i5l5GBYcdbGOoiCrWLKFWrFZs42KKIQfTg28IN6bozeG0WOH9Mz8zRqadJLZC+TL6QfHjvbBdLSYrsdqaXF9grga0B5MNxRm7rRvADuraUH0N9KIK1SxUk3gJDJ+gp4/wAMY2NZNcUuVtEWBpCrQS0ulk1FpS2Aek0+hpbaOwtPbGI6QvgZH0bMswiWaKSAyQSMjttZrwc1Kl8Nwqds8kv1X6P7k1S85VsvqwBq+pVJLDl8uU8bY2Ayp6HMEJ8lL0GIXmSLU7n5fV9PcGUKy5c+SCVVylntHp7gUh6UUtk7y358+5neLrzaNJe7/wAB11eWLk3hYbMHfVJ1ZTq4zFSSb8JsY8eFyt+hLyJ1Gl7NvwfbR+Gk1tjf6lDi/TPgRdaltHK5o9UsvGV/YM8Kw5aSfkl4niqlGcO7jhe+cmFOsl/yMOD4UvwynD9HZN/ik8v3YV1ufz0Y4zzTSS8tlnR9IkuX08YK19ByvaMX0pKdWX0XKv7yRblym3/0tfWCiv4C/wDBTwnlN46ZAV7ScqmHlY2wlls1VOqpJ+gLo10qrj3l0+iBRdBJNvsp2tlUj8z6eOjMtxRcf9bC7R/Vm9uufGyz4UVueca5Sq/FlKdOcU3hOUWlhDPjbnbEfNbWOkVadVlqFQp00TZHJI58HokdQRFkRKNWTqqxfEYwQUAOc2NOiIUcwT2kMyS9SEuaavnj7lPotdm90yjywXsW8DbRfIvYlwc9vY8uhmDjiS4Hqk32KssquJFUhlF6VuyvUptFplNGI1235ZAulHLNFxDDLB1lbbjkZfUUlC5BTTKXQPUUUrGASggDkF4j1LBYptFVRy/RdCTGAUmGhChl/PbBltTrZiw/ez2BVpolS5k8fLTT3m/0XlglV2x6OognTb+U4un+aHT1jkPUkkkvTd+pR4k02NjBVKVPL5lGU5vmeH+n0AttxNKTx8Jyk+0Mt/YI8bn9oLQOWdQqE3sv8TXvLFQT3fX2JdI05O2kmt5pt+5Whw9eXE1P4ThF4xzvDS9jZ6Zw5VjFKUljwkSb4xUV2THTm5S16RndCvmoJeNvqi7cXGU23/zIZp8GU1Jv4k93nGySJpcJUXjMptJ5S5tsgmk3Yws8Eqs5Z1Eorp0G6bpsZVJ15Zcprlgu0YJ5+7f7BKOj0scu+MY/E0WaFlGHSTx4ZlJgpZI+ilc0IYe2H6JZA+naC5VnXqPCSxGK+uZM09WpTj4BGoarFJ7k6JBuWh19ewpRxFIy+q6rTnCUZpNYZU1vVNnhmLubtyb32DYcDntmc/kQwqqtnJNZeOmdjvMQpjkzoNHITJTpxCKNFyvQcXhoiSN3xToqw5JGGqRw8EhPkjMo0zghI6EMHME9pPEk/UiHwiymWj0fSqylBexdUTJcPXTjhPobmwpc24hk+rHYbRyhbd2W1BIkccDWAbDJEckQVYIsSYMv7tLZEJVmd163y8oF2kNw5W+b6lF2ri89A+OeqZjJjraLttsi1GefYpU2TxZGylAtqqkd+LkrKHkkjhAmw8YosQtFNrPTuHLeMYpJJJLsgLQrYL0bjYG2babH6npVK4i4VFmMuqzgg03Q7W2WKdOK9cZf3O1L7APu9ReCctUWsbbD6uY+gpXqXcw9TWJJ7kc9a9TSUiniRtp6mvIz/UovuYKpq+e5A9Wfk1wkVUDfV9Tiu4Or64l3MXV1d+Shcak33LWGTI8uOJqb7XvUAXmrOWdwNWuvL+ncpVK7Yzj8ZC2Tza0i1fXjltko5GnBuMUlSOdObm7ZImPiyDI5SLaImWlIRDzCMUb5HvOq26lB+x5PrdvyVH7nsVz0fseWcWY+IxbC/sGyLRn0OQzmJKSyxoATUaOS/TpJD7eg0uhI4gJTsbhjpCpSw9jZaDqDUVkxsQ/pr+UWz9DOGNs161CLKtxqCQF5n5I6zbQsgzxot3WreAWqzlLcrS6jqcsMOo6BhSKIbxbElOaaK99U2MR7NzqiGMiZVSgqo11w7iATCLuDn8TlpIEVbku6Kstzf0MShqwsZIO29PyWJMrRqnHUAMJE5cxyC67a69C5Xqgq8uepIoJYK1OoBZ3L8ly/q5yCakh/FDRzs+R3ondwxjrMr5HRQbihb5GSubZFWqY9x0p49ynUnk1GIOcxNnEjiRLFGwQ3lGSHzmQSkWiM7kcmRpjkyyiTIhh0os+g9RrcsX7Hk3EVxzVH7iEJ4OxrL0DKNLIVsKCTQhG8smawRXYfjBYFKkn2OCELZ1KRXrWvdFnTKuHhiEEu47BNcZaCjGMQhdDDB9x1I8iENR6FZdk1Gtgr3dxzMQjUUrsHOTqipKZFKTEIKBsbyZaXkPWsOWKQhAsobEW4M5NiELjKK1dAq8j1EIuPZG9GeuovcHyjliEPw6OXl7E1gZKoIQVIXbIpzI1E6I0ZH4GSmIRERkMpDRCNmTqHIQiixwhCISz/2Q=="
+alt="A cross in hands"
+width="300"
+height="300"
+title="Cross Offering">
+<a href="https://onlyfans.com/">
+<img src="https://static.hudl.com/users/prod/16470855_c428341b9be9447887931a51a75adf3b.jpg">    
+</a>
+</body> 
+
